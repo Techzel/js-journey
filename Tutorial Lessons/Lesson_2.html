@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2</title>
+</head>
+<body>
+    <script>
+
+        const one_soup = 10 * 3;
+        const three_burgers = (3 * 8) * 3;
+        const one_icecream = 5 * 3;
+
+        const allOrederTotal = one_soup + three_burgers + one_icecream;
+
+        let three_persons = allOrederTotal * 3 
+        
+        console.log(`One Soup: ${one_soup}`);
+        console.log(`Three Burgers: ${three_burgers}`);
+        console.log(`One Icecream: ${one_icecream}`);
+
+        console.log(`Three persons Order Total Each: ${three_persons}`);
+
+        // Calculate the total cose of a toaster and shirts each
+
+        let toast = 18.99;
+        let shirts = 7.99 * 2;
+        const allTotal = toast + shirts;
+        const totalTax_10Percent = allTotal * 0.1;
+        const totalTax_20Percent = allTotal * 0.2;
+
+        console.log(`toast Price: ${toast}`);
+        console.log(`Shirts Price: ${shirts.toFixed(2)}`);
+        console.log(allTotal);
+        console.log(`Total Tax (10%): ${totalTax_10Percent.toFixed(2)}`);
+        console.log(`Total Tax (20%): ${totalTax_20Percent.toFixed(2)}`);
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even</title>
+</head>
+<body>
+
+    <div>
+      <label for="text">Enter a Number</label>
+      <input class="input" type="text" id="text">
+      <input id="submit" type="submit">
+    </div>
+    <div class="result"></div>
+    
+    <script>
+
+    	const input = document.querySelector('.input');
+      	const submit = document.getElementById('submit');
+      	const  display_message = document.querySelector('.result');
+      	submit.addEventListener('click', () =>  {
+        	let message;
+          		if(input.value.trim() === ''){
+            display_message.textContent = 'The input is empty'
+              return;
+            };
+            const input_value = Number(input.value);
+            if(Number.isNaN(input_value)){
+              message = `Please Input a Number`;
+            }else if(input_value % 2 === 0){
+              message = `${input_value} is Even`
+            }else{
+              message = `${input_value} is Odd`
+            }
+            display_message.textContent = message;
+      });
+    </script>
+</body>
+</html>

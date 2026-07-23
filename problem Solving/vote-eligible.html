@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+	<div>	
+		<input class="input" type="text">
+		<input id="submit" type="submit">
+	</div>
+	<p class="result"></p>
+	<p class="message"></p>
+	
+  <script>
+    // Check if a person is eligible to vote (18 years old and above).
+		const input = document.querySelector('.input');
+		const submit = document.getElementById('submit');
+		const displayResult = document.querySelector('.result');
+		const numberMessage = document.querySelector('.message');
+
+		submit.addEventListener('click', () => {
+			if(input.value.trim() === ''){
+				displayResult.textContent = 'Extra Spaces Detected';
+				input.value = ''; //remove the input value after typing
+        		input.focus(); // The Typing Cursor Automatically shown
+				return;
+			}
+			const userInput = Number(input.value);
+			if(Number.isNaN(userInput)){
+				displayResult.textContent = 'Please Input a Number';
+				input.value = ''; //remove the input value after typing
+        		input.focus(); // The Typing Cursor Automatically shown
+				return;
+			};
+			let message;
+			if(userInput >= 18 && userInput <= 100 ){
+				let oddEven;
+				if(userInput % 2 === 0){
+					oddEven = `${userInput} is Even Number`
+				}else{
+					oddEven = `${userInput} is Odd`
+				}
+				numberMessage.textContent = oddEven;
+				message = 'You Are Eligible to Vote in National Election!'
+			}else{
+				message = 'You Are Not Eligible!'
+			}
+			input.value = '';
+			input.focus();
+			displayResult.textContent = message;
+
+		});
+		
+  </script> 
+</body>
+</html>

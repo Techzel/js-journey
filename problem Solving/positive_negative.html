@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive or Negative</title>
+</head>
+<body>
+
+    <div>
+        <input class="input-value" type="text">
+        <input id="submit" type="submit">
+    </div>
+    <div>
+        <p class="result">Result Here</p>
+    </div>
+    <script>
+        // Check if a number is positive or negative.
+
+            const submit = document.getElementById('submit');
+            const input_value = document.querySelector('.input-value');
+            const display_result = document.querySelector('.result');
+
+                submit.addEventListener('click', () => {
+                    const value = Number(input_value.value);
+                    let message;
+                        if(Number.isNaN(value)){
+                            message = `${value} is Not a Number`
+                        }else if(value > 0){
+                            message = `${value} is Positive`
+                        }else if(value < 0){
+                            message = `${value} is Negative`
+                        }else{
+                            message = `${value} is Zero`
+                        }
+                        display_result.textContent = message;
+                });
+
+            // if(value > 0){
+            //     console.log(`${number} is Positive`)
+            // }else if(value < 0){
+            //     console.log(`${number} is Negative`)
+            // }else{
+            //     console.log(`${number} is Zero`)
+            // }
+
+        // Now Display the Result in the Webpage
+
+        
+    </script>
+</body>
+</html>
