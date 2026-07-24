@@ -6,6 +6,9 @@
     <title>Lesson 6</title>
 </head>
 <body>
+
+    <button onclick="minusTwo()">-2</button>
+    <button onclick="minusThree()">-3</button>
     <script>
         // create a variable called hour
         // use 24 hour format 
@@ -58,11 +61,26 @@
         console.log('----Continuing Lesson----');
         // Cart Quantity
 
-        const cartQuantity = 10;
-        if(cartQuantity >= 10){
-            console.log('The Cart is Full!')
-        }
+        let cartQuantity = 10;
+        function minusTwo(){
+            cartQuantity -= 2;
+                console.log(cartQuantity)
+                    if(cartQuantity === 0 || cartQuantity < 0){
+                        console.log(cartQuantity + 'Not Enough Items');
+                    }
+        };
+        function minusThree(){
+            cartQuantity -= 3;
+                console.log(cartQuantity)
+                    if(cartQuantity === 0 || cartQuantity < 0){
+                        console.log(cartQuantity + 'Not Enough Items');
+                    }
+        };
 
+        
+        
+
+        
         
 
         
