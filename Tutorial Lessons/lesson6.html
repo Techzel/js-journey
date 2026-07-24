@@ -10,14 +10,63 @@
         // create a variable called hour
         // use 24 hour format 
         // save as a number 0 and 23
+        // create a variable wth my name
+
         const hour = 17;
+        const myName = 'Rozel Candado';
         if(hour > 6 && hour <= 12){
-            console.log('Good Morning!')
+            console.log(`Good Morning, ${myName}`)
         }else if(hour > 13 && hour <= 17){
-            console.log('Good Afternoon!')
+            console.log(`Good Afternoon, ${myName}`)
         }else{
-            console.log('Good Night!')
+            console.log(`Good Night, ${myName}`)
         }
+        console.log('----Continuing Lesson----');
+
+        const age = 100;
+        let isHoliday = false;
+        if((age <= 10 || age >= 70) && isHoliday){
+            console.log('Discounted');
+        }else {
+            console.log('Not Discounted')
+        }
+
+        console.log('----Continuing Lesson----');
+
+        // Create a Coinflip Game
+
+        const randomNum = Math.random();
+        console.log(randomNum)
+       let result;
+        if(randomNum < 0.5){
+            result = 'Heads'
+        }else{
+            result = 'Tails'
+        };
+        // sample of using Ternary Operators
+        let sampleTernary = randomNum < 0.5 ? 'Heads' : 'Tails';
+        
+        let yourGuess = 'Heads';
+
+        if(result === 'Heads'){
+            result = 'You Win'
+        }else if(result === 'Tails'){
+            result = 'You Lose'
+        }
+        console.log(result);
+
+        console.log('----Continuing Lesson----');
+        // Cart Quantity
+
+        const cartQuantity = 10;
+        if(cartQuantity >= 10){
+            console.log('The Cart is Full!')
+        }
+
+        
+
+        
+
     </script>
 </body>
 </html>
